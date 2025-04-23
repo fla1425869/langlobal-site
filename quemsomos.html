@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Langlobal</title>
+    <link rel="stylesheet" href="css/style.css"> {/* Ligação ao MESMO CSS */}
+</head>
+<body>
+
+    <div class="lang-switch">
+        Português | <a href="index_en.html">English</a> | <a href="index_fr.html">Français</a>
+    </div>
+
+    <header>
+        <div class="container">
+            <img src="images/logo.jpg" alt="Logótipo Langlobal">
+            <h1>Langlobal</h1>
+            <p>Excelência em Serviços Linguísticos</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li> {/* Pode destacar o link atual */}
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="equipa.html">Equipa</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content"> {/* Classe para possível estilo específico */}
+        <div class="container">
+
+            <section id="about">
+                <h2>Quem Somos</h2>
+                <p>A Langlobal, fundada em 2017, oferece serviços de tradução e revisão num vasto leque linguístico, que reflete as variadas competências linguísticas da equipa de trabalho.</p>
+            </section>
+
+            <section id="mission">
+                <h2>Missão</h2>
+                <p>A nossa missão é proporcionar a melhor qualidade de tradução e revisão linguística, pretendendo satisfazer todas as necessidades dos nossos clientes. Não iremos descansar enquanto não obtivermos o melhor resultado.</p>
+                <p>Tendo por base excelência e profissionalismo, realizamos cada trabalho com rigor, eficiência, cumprindo estritamente o prazo definido com o cliente, respeitando a sua confidencialidade.</p>
+            </section>
+
+            <section id="values">
+                <h2>Valores</h2>
+                <p>Realizamos todo o nosso trabalho prestando atenção ao rigor, a fiabilidade e a consistência, enquanto respeitamos a privacidade do consumidor.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year-pt-qs"></span> Langlobal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+     <script>
+        // Id diferente para evitar conflitos se houver mais scripts
+        document.getElementById('year-pt-qs').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

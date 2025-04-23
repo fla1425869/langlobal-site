@@ -4,145 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Langlobal - Serviços Linguísticos</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-        header, nav, section, footer { padding: 20px; margin-bottom: 15px; border-bottom: 1px solid #eee; }
-        nav ul { list-style: none; padding: 0; }
-        nav ul li { display: inline; margin-right: 15px; }
-        nav a { text-decoration: none; color: #0056b3; }
-        nav a:hover { text-decoration: underline; }
-        h2, h3 { color: #333; }
-        .team-member { margin-bottom: 20px; padding-left: 15px; border-left: 3px solid #ccc; }
-        footer { text-align: center; font-size: 0.9em; color: #666; border-bottom: none; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;}
-        .lang-switch { text-align: right; padding: 10px 20px; background-color: #f8f8f8; border-bottom: 1px solid #eee; }
-        .lang-switch a { margin-left: 10px; }
-        section { scroll-margin-top: 60px; /* Adjust as needed for fixed header height */ }
-        .client-logos img { height: 50px; margin: 15px; vertical-align: middle; } /* Style for client logos */
-        header img { max-width: 180px; height: auto; margin-bottom: 10px; display: block; } /* Style for company logo */
-    </style>
+    <link rel="stylesheet" href="css/style.css"> {/* Ligação ao CSS na pasta css/ */}
 </head>
 <body>
 
     <div class="lang-switch">
         Português | <a href="index_en.html">English</a> | <a href="index_fr.html">Français</a>
+        {/* Nota: Terás de criar versões EN e FR destas novas páginas também */}
     </div>
 
     <header>
-        <img src="images/logo.jpg" alt="Logótipo Langlobal">
-        <h1>Langlobal</h1>
-        <p>Excelência em Serviços Linguísticos</p>
+        <div class="container">
+            <img src="images/logo.jpg" alt="Logótipo Langlobal">
+            <h1>Langlobal</h1>
+            <p>Excelência em Serviços Linguísticos</p>
+        </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#about">Quem Somos</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#expertise">Áreas de Especialização</a></li>
-            <li><a href="#team">Equipa</a></li>
-            <li><a href="#mission">Missão</a></li>
-            <li><a href="#values">Valores</a></li>
-            <li><a href="#clients">Clientes</a></li>
-            <li><a href="#quotes">Orçamentos</a></li> 
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Início</a></li> {/* Link para a própria página principal */}
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="equipa.html">Equipa</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                {/* O link para Orçamentos pode ser removido da NAV se não tem página */}
+            </ul>
+        </div>
     </nav>
 
-    <section id="about">
-        <h2>Quem Somos</h2>
-        <p>A Langlobal, fundada em 2017, oferece serviços de tradução e revisão num vasto leque linguístico, que reflete as variadas competências linguísticas da equipa de trabalho.</p>
-    </section>
+    <main>
+        <div class="container">
+            <div class="card-container">
+                {/* Cartão Quem Somos */}
+                <a href="quemsomos.html" class="card">
+                    <h2>Quem Somos</h2>
+                    <p>Saiba mais sobre a nossa história, missão e valores.</p>
+                    {/* Podes adicionar um ícone aqui se quiseres */}
+                </a>
 
-    <section id="services">
-        <h2>Serviços</h2>
-        <p>Somos uma equipa com diversas competências comunicativas. Portanto oferecemos serviços de tradução e revisão em diferentes combinações linguísticas, sendo os nossos membros falantes nativos de português, ucraniano e russo, e fluentes em inglês e francês.</p>
-        
-        <div id="revision" style="margin-top: 20px; padding-top:15px; border-top: 1px dashed #ddd;">
-            <h3>Revisão e Edição</h3>
-            <p>Fornecemos serviços da revisão de aspetos linguísticos em diferentes tipos de textos, inclusive textos académicos.</p>
+                {/* Cartão Serviços */}
+                <a href="servicos.html" class="card">
+                    <h2>Serviços</h2>
+                    <p>Descubra os nossos serviços de tradução, revisão e áreas de especialização.</p>
+                </a>
+
+                {/* Cartão Equipa */}
+                <a href="equipa.html" class="card">
+                    <h2>Equipa</h2>
+                    <p>Conheça os profissionais experientes da Langlobal.</p>
+                </a>
+
+                {/* Cartão Clientes */}
+                <a href="clientes.html" class="card">
+                    <h2>Clientes</h2>
+                    <p>Veja algumas das empresas que confiam nos nossos serviços.</p>
+                </a>
+
+                {/* Caixa Orçamentos (sem link) */}
+                <div class="card card-orcamentos"> {/* Usamos um div em vez de <a> */}
+                    <h2>Orçamentos</h2>
+                    <p>Para orçamentos, contacte-nos através do e-mail: info@langlobal.com</p>
+                    {/* Mantive o email aqui como texto informativo */}
+                    <p>Teremos todo o prazer em responder ao seu pedido.</p>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <section id="expertise">
-        <h2>Áreas de Especialização</h2>
-        <p>A nossa equipa de profissionais é especializada em diversas áreas, tais como:</p>
-        <ul>
-            <li>Tecnologias de Informação</li>
-            <li>Tecnologia</li>
-            <li>Ciências Humanas</li>
-            <li>Marketing</li>
-            <li>Localização</li>
-            <li>Ciências Sociais</li>
-            <li>Turismo</li>
-            <li>Direito</li>
-            <li>Economia/Finanças</li>
-        </ul>
-    </section>
-
-    <section id="team">
-        <h2>Equipa</h2>
-        <p>Somos uma empresa composta por tradutores experientes, com diferentes áreas de especialização e um diverso leque de línguas de trabalho.</p>
-        
-        <div class="team-member">
-            <h3>Anton Malchuk</h3>
-            <p>Licenciado em Línguas Aplicadas pela Universidade do Minho, iniciou a sua carreira de tradução e revisão em 2018, utilizando as suas competências nativas em ucraniano e russo, juntamento com fluência em português e inglês. Apresenta, por tanto, um diverso portefólio de tradução, particularmente nas áreas das tecnologias de informação e tecnologia.</p>
-        </div>
-        
-        <div class="team-member">
-            <h3>Carlos Miguel da Costa Pereira</h3>
-            <p>Licenciado em Línguas Aplicadas e mestre em Língua, Literatura e Cultura Inglesa pela Universidade do Minho, é tradutor e revisor desde 2019. Especializa-se na tradução EN-PT nas áreas das ciências humanas e marketing, assim como localização.</p>
-        </div>
-
-        <div class="team-member">
-            <h3>David Manuel da Silva Oliveira</h3>
-            <p>Licenciado em Línguas Aplicadas e mestre em Tradução e Comunicação Multilingue pela Universidade do Minho, oferece serviços de tradução EN-PT e revisão desde 2016, com particular experiência nas áreas das ciências sociais e turismo.</p>
-        </div>
-
-        <div class="team-member">
-            <h3>João Pedro Lamego Macedo</h3>
-            <p>Licenciado em Línguas Aplicas e Negócios Internacionais pela Universidade do Minho, combina conhecimentos económicos com experiência no mundo da tradução e revisão EN-PT e FR-PT desde 2018, de forma a criar um vasto portefólio nas áreas do direito, economia e finanças.</p>
-        </div>
-    </section>
-
-    <section id="mission">
-        <h2>Missão</h2>
-        <p>A nossa missão é proporcionar a melhor qualidade de tradução e revisão linguística, pretendendo satisfazer todas as necessidades dos nossos clientes. Não iremos descansar enquanto não obtivermos o melhor resultado.</p>
-        <p>Tendo por base excelência e profissionalismo, realizamos cada trabalho com rigor, eficiência, cumprindo estritamente o prazo definido com o cliente, respeitando a sua confidencialidade.</p>
-    </section>
-
-    <section id="values">
-        <h2>Valores</h2>
-        <p>Realizamos todo o nosso trabalho prestando atenção ao rigor, a fiabilidade e a consistência, enquanto respeitamos a privacidade do consumidor.</p>
-    </section>
-
-    <section id="clients">
-        <h2>Clientes</h2>
-        <p>Desde pequenas empresas a grandes grupos, os nossos clientes, de indústrias e setores variados, confiam na nossa capacidade de fornecer traduções eficientes e precisas.</p>
-         <div class="client-logos" style="margin-top: 20px; text-align: center;"> 
-            <img src="images/sequra.jpg" alt="Logótipo Sequra">
-            <img src="images/ibm.jpg" alt="Logótipo IBM">
-            <img src="images/nortempresa.jpg" alt="Logótipo Nortempresa">
-            <img src="images/pnb.jpg" alt="Logótipo PNB">
-            <img src="images/sony.jpg" alt="Logótipo Sony">
-            <img src="images/bosch.jpg" alt="Logótipo Bosch">
-            <img src="images/bragalis.jpg" alt="Logótipo Bragalis">
-            <img src="images/norporgest.jpg" alt="Logótipo Norporgest">
-            <img src="images/vieira de castro.jpg" alt="Logótipo Vieira de Castro">
-        </div>
-    </section>
-
-    
-    <section id="quotes">
-        <h2>Orçamentos</h2>
-        <p>Se pretende utilizar e conhecer com mais detalhe os nossos serviços, solicite um orçamento gratuito através do e-mail: 
-           <a href="mailto:info@langlobal.com">info@langlobal.com</a>
-        </p>
-        <p>Teremos todo o prazer em responder ao seu pedido e apresentar-lhe serviço de elevada qualidade.</p>
-    </section>
+    </main>
 
     <footer>
-        <p>&copy; <span id="year-pt"></span> Langlobal. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; <span id="year-pt"></span> Langlobal. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script>
+        // Garante que o script do ano funciona (pode estar no footer ou aqui)
         document.getElementById('year-pt').textContent = new Date().getFullYear();
     </script>
 

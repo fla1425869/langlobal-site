@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Langlobal</title>
+    <link rel="stylesheet" href="css/style.css"> {/* Ligação ao MESMO CSS */}
+</head>
+<body>
+
+    <div class="lang-switch">
+        Português | <a href="index_en.html">English</a> | <a href="index_fr.html">Français</a>
+    </div>
+
+    <header>
+        <div class="container">
+            <img src="images/logo.jpg" alt="Logótipo Langlobal">
+            <h1>Langlobal</h1>
+            <p>Excelência em Serviços Linguísticos</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li> {/* Pode destacar o link atual */}
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="equipa.html">Equipa</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content"> {/* Classe para possível estilo específico */}
+        <div class="container">
+
+            <section id="services">
+        <h2>Serviços</h2>
+        <p>Somos uma equipa com diversas competências comunicativas. Portanto oferecemos serviços de tradução e revisão em diferentes combinações linguísticas, sendo os nossos membros falantes nativos de português, ucraniano e russo, e fluentes em inglês e francês.</p>
+        
+        <div id="revision" style="margin-top: 20px; padding-top:15px; border-top: 1px dashed #ddd;">
+            <h3>Revisão e Edição</h3>
+            <p>Fornecemos serviços da revisão de aspetos linguísticos em diferentes tipos de textos, inclusive textos académicos.</p>
+        </div>
+    </section>
+    
+    <section id="expertise">
+        <h2>Áreas de Especialização</h2>
+        <p>A nossa equipa de profissionais é especializada em diversas áreas, tais como:</p>
+        <ul>
+            <li>Tecnologias de Informação</li>
+            <li>Tecnologia</li>
+            <li>Ciências Humanas</li>
+            <li>Marketing</li>
+            <li>Localização</li>
+            <li>Ciências Sociais</li>
+            <li>Turismo</li>
+            <li>Direito</li>
+            <li>Economia/Finanças</li>
+        </ul>
+    </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year-pt-sv"></span> Langlobal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+     <script>
+        // Id diferente para evitar conflitos se houver mais scripts
+        document.getElementById('year-pt-sv').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

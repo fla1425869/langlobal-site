@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - Langlobal</title>
+    <link rel="stylesheet" href="css/style.css"> {/* Ligação ao MESMO CSS */}
+</head>
+<body>
+
+    <div class="lang-switch">
+        Português | <a href="index_en.html">English</a> | <a href="index_fr.html">Français</a>
+    </div>
+
+    <header>
+        <div class="container">
+            <img src="images/logo.jpg" alt="Logótipo Langlobal">
+            <h1>Langlobal</h1>
+            <p>Excelência em Serviços Linguísticos</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li> {/* Pode destacar o link atual */}
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="equipa.html">Equipa</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content"> {/* Classe para possível estilo específico */}
+        <div class="container">
+
+            <section id="clients">
+        <h2>Clientes</h2>
+        <p>Desde pequenas empresas a grandes grupos, os nossos clientes, de indústrias e setores variados, confiam na nossa capacidade de fornecer traduções eficientes e precisas.</p>
+         <div class="client-logos" style="margin-top: 20px; text-align: center;"> 
+            <img src="images/sequra.jpg" alt="Logótipo Sequra">
+            <img src="images/ibm.jpg" alt="Logótipo IBM">
+            <img src="images/nortempresa.jpg" alt="Logótipo Nortempresa">
+            <img src="images/pnb.jpg" alt="Logótipo PNB">
+            <img src="images/sony.jpg" alt="Logótipo Sony">
+            <img src="images/bosch.jpg" alt="Logótipo Bosch">
+            <img src="images/bragalis.jpg" alt="Logótipo Bragalis">
+            <img src="images/norporgest.jpg" alt="Logótipo Norporgest">
+            <img src="images/vieira de castro.jpg" alt="Logótipo Vieira de Castro">
+        </div>
+    </section>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year-pt-sl"></span> Langlobal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+     <script>
+        // Id diferente para evitar conflitos se houver mais scripts
+        document.getElementById('year-pt-sl').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
