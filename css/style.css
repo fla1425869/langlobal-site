@@ -7,29 +7,35 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: #fff; /* Fundo base branco */
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; /* Padding lateral aplicado no container */
 }
 
 /* --- Header --- */
 header {
     border-bottom: 1px solid #eee;
-    padding: 20px 0;
+    padding: 20px 0; /* Padding vertical no header */
 }
-header .container {
-    padding: 20px; /* Padding interno */
-}
+/* Removido header .container { padding: 20px; } pois o container já tem padding */
 header img {
     max-width: 180px;
     height: auto;
     margin-bottom: 10px;
+    display: block; /* Garante que a imagem não fica inline */
 }
 header h1 {
     margin-top: 0;
+    margin-bottom: 0.2em; /* Ajustar espaço abaixo do H1 */
+}
+header p {
+    margin-top: 0;
+    font-style: italic;
+    color: #555;
 }
 
 /* --- Lang Switch --- */
@@ -49,165 +55,182 @@ header h1 {
     text-decoration: underline;
 }
 
-/* --- Navegação (Fixa) --- */
-nav {
-    border-bottom: 1px solid #eee;
-    background-color: #f8f8f8;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 10px 0;
-}
-nav .container {
-    padding: 0 20px; /* Ajustar padding para nav */
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
-nav a {
-    text-decoration: none;
-    color: #0056b3;
-    padding: 8px 10px;
-    display: block; /* Garante que o padding funciona bem */
-}
-nav a:hover {
-    text-decoration: none;
-    background-color: #ddd;
-    border-radius: 4px;
-}
-
 /* --- Footer --- */
 footer {
     text-align: center;
     font-size: 0.9em;
     color: #666;
     border-top: 1px solid #eee;
-    margin-top: 40px; /* Aumentar espaço antes do footer */
-    padding: 20px 0;
+    margin-top: 40px;
+    padding: 20px 0; /* Padding vertical no footer */
 }
-footer .container {
-    padding: 20px; /* Padding interno */
-}
+/* Removido footer .container { padding: 20px; } */
 
+
+/* --- Tipografia Geral --- */
 h2, h3 {
     color: #333;
 }
-/* Títulos H2 centrados por defeito (pode ser sobrescrito se necessário) */
+/* Títulos H2 - Alinhados à esquerda por defeito agora */
 h2 {
-    text-align: center;
-    margin-bottom: 30px;
+    /* text-align: center; */ /* Removido centrado por defeito */
+    text-align: left;
+    margin-bottom: 25px; /* Espaço abaixo */
+    margin-top: 0; /* Reset de margem de topo */
+    padding-bottom: 10px; /* Espaço antes da borda */
+    border-bottom: 1px solid #eee; /* Linha subtil abaixo dos H2 */
 }
-
-
-/* === ESTILOS ESPECÍFICOS PARA INDEX.HTML (CARTÕES) === */
-main { /* Estilo para o <main> que contém os cartões */
-    padding: 40px 0;
-}
-
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card { /* Estilo base para todos os cartões (links <a> e o div de Orçamentos) */
-    display: block; /* Faz o <a> ocupar espaço como um bloco */
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 25px;
-    text-align: center;
-    text-decoration: none;
-    color: inherit; /* Usa a cor de texto normal */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover { /* Efeito só nos cartões que são links (<a>) */
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.card h2 { /* Título dentro do cartão */
-    margin-top: 0;
-    color: #0056b3;
+h3 {
     margin-bottom: 15px;
-    font-size: 1.4em; /* Tamanho do título do cartão */
+    margin-top: 0;
 }
 
-.card p {
-    font-size: 0.95em;
-    line-height: 1.5;
+/* === LAYOUT PRINCIPAL (Conteúdo + Sidebar) === */
+
+.page-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite que a sidebar passe para baixo */
+    gap: 30px; /* Espaço entre conteúdo e sidebar */
+    padding: 30px 0; /* Espaçamento vertical no wrapper */
+    /* Container aplicado no HTML do page-wrapper ou individualmente abaixo */
 }
 
-/* Estilo específico para a caixa de orçamentos (o div) */
-.card-orcamentos {
-    background-color: #eef5ff; /* Fundo diferente */
-    border-color: #cce0ff;
-    /* Remover efeito hover se não for link */
-    transition: none;
+.content-area {
+    flex: 1; /* Ocupa o espaço flexível */
+    min-width: 60%; /* Largura mínima */
 }
-.card-orcamentos:hover { /* Garantir que não tem efeito hover */
-     transform: none;
-     box-shadow: none;
-}
-/* Ajustar título se necessário */
-/* .card-orcamentos h2 { } */
-/* Ajustar parágrafo se necessário */
-/* .card-orcamentos p { } */
-
-
-/* === ESTILOS PARA O CONTEÚDO DAS PÁGINAS INTERNAS === */
-
-main.page-content { /* Aplica padding ao <main> das páginas internas */
-     padding: 40px 0;
-}
-
-/* Estilos para as secções DENTRO das páginas internas */
-.page-content section {
+/* Estilos para secções DENTRO da área de conteúdo principal (nas páginas internas) */
+.content-area section {
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #eee;
-    /* Ajustar scroll-margin se a nav fixa estiver a tapar títulos */
-    scroll-margin-top: 80px;
 }
-.page-content section:last-of-type { /* Remover borda da última secção */
+.content-area section:last-of-type { /* Remove borda/espaço da última secção */
     border-bottom: none;
-    margin-bottom: 0; /* Remover margem extra */
-    padding-bottom: 0; /* Remover padding extra */
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
-.page-content h2 { /* Títulos H2 nas páginas internas podem ser alinhados à esquerda */
-    text-align: left;
+/* Ajustar H2 dentro das secções */
+.content-area section h2 {
+    /* Herda o h2 default (left, border-bottom) */
+    font-size: 1.5em; /* Exemplo de ajuste de tamanho */
 }
 
-/* --- Áreas de Especialização (usado em servicos.html) --- */
+.sidebar-nav {
+    flex-basis: 260px; /* Largura fixa da sidebar */
+    flex-shrink: 0; /* Não encolhe */
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content; /* Altura ajusta-se ao conteúdo */
+}
+
+.sidebar-nav h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    text-align: left; /* Alinhar título da sidebar */
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #0056b3;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+    font-size: 0.95em; /* Ajustar tamanho da fonte */
+}
+.sidebar-nav li:last-child a {
+    border-bottom: none;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a.active { /* Estilo para link ativo (requer JS ou classe manual) */
+    background-color: #e0eafc; /* Fundo diferente no hover/ativo */
+    /* color: #00276b; */ /* Cor de texto diferente no hover/ativo */
+    border-radius: 4px;
+}
+
+/* Media Query para ecrãs pequenos */
+@media (max-width: 768px) {
+    .page-wrapper {
+        flex-direction: column; /* Empilha as colunas */
+         padding: 20px 0; /* Ajustar padding vertical */
+    }
+    .sidebar-nav {
+        flex-basis: auto; /* Largura automática */
+        width: 100%; /* Ocupa largura total */
+        margin-top: 20px;
+        border-left: 1px solid #eee; /* Manter borda */
+        box-sizing: border-box; /* Garante que padding não aumenta a largura total */
+    }
+    /* Ajustar H2 em mobile se necessário */
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
+
+/* === ESTILOS REMOVIDOS OU COMENTADOS === */
+
+/* --- Navegação Horizontal Antiga (REMOVIDO) --- */
+/* nav { ... } */
+/* nav .container { ... } */
+/* nav ul { ... } */
+/* nav ul li { ... } */
+/* nav a { ... } */
+/* nav a:hover { ... } */
+
+/* --- Layout de Cartões Antigo (REMOVIDO) --- */
+/* main { padding: 40px 0; } */ /* Removido pois .page-wrapper tem padding */
+/* .card-container { ... } */
+/* .card { ... } */
+/* .card:hover { ... } */
+/* .card h2 { ... } */
+/* .card p { ... } */
+/* .card-orcamentos { ... } */
+/* .card-orcamentos:hover { ... } */
+
+/* --- Wrapper antigo das páginas internas (REMOVIDO) --- */
+/* main.page-content { padding: 40px 0; } */ /* Removido, usar .content-area */
+/* .page-content section { ... } */ /* Regras movidas para .content-area section */
+/* .page-content h2 { ... } */ /* Regras movidas para .content-area section h2 */
+
+
+/* === ESTILOS ESPECÍFICOS DE CONTEÚDO (Mantidos e Adaptados) === */
+/* Estes estilos aplicam-se ao conteúdo DENTRO de .content-area nas páginas internas */
+
+/* --- Áreas de Especialização (usado em servicos.html dentro de .content-area) --- */
 #expertise ul {
     list-style: disc;
     padding-left: 20px;
-    margin: 20px 0 0 0; /* Adiciona margem em cima */
-    column-count: 2; /* Ajustado para 2 colunas por defeito */
+    margin: 20px 0 0 0;
+    column-count: 2;
     column-gap: 40px;
-    column-width: 200px; /* Pode ajustar */
+    column-width: 200px;
 }
 #expertise ul li {
     margin-bottom: 10px;
     break-inside: avoid-column;
 }
-/* Media Query para #expertise (opcional, se quiser 1 coluna em mobile) */
-@media (max-width: 600px) {
+@media (max-width: 600px) { /* Mantém media query para a lista */
     #expertise ul {
         column-count: 1;
     }
 }
 
-/* --- Equipa (usado em equipa.html) --- */
-/* O seletor agora é só dentro de #team, que estará em equipa.html */
+/* --- Equipa (usado em equipa.html dentro de .content-area) --- */
 #team .team-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -215,20 +238,18 @@ main.page-content { /* Aplica padding ao <main> das páginas internas */
     margin-top: 20px;
 }
 .team-member {
-    /* Estilos mantêm-se: padding, border, background, etc. */
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
-    margin-bottom: 0; /* O gap trata do espaçamento */
+    margin-bottom: 0; /* Gap cuida do espaçamento */
 }
 .team-member h3 {
     margin-top: 0;
     color: #0056b3;
 }
 
-/* --- Clientes (usado em clientes.html) --- */
-/* O seletor agora é só dentro de #clients, que estará em clientes.html */
+/* --- Clientes (usado em clientes.html dentro de .content-area) --- */
 #clients .client-logos {
     margin-top: 20px;
     display: flex;
@@ -242,18 +263,3 @@ main.page-content { /* Aplica padding ao <main> das páginas internas */
     width: auto;
     max-width: 150px;
 }
-
-/* --- Secção #quotes (REMOVIDO ou COMENTADO) --- */
-/* Os estilos antigos para #quotes como uma secção com link já não são necessários
-   porque essa secção agora é um .card-orcamentos na index.html
-#quotes {
-    background-color: #eef5ff;
-    border: 1px solid #cce0ff;
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 30px;
-}
-#quotes h2 { color: #0056b3; }
-#quotes a { ... }
-#quotes a:hover { ... }
-*/

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipa - Langlobal</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <title>Equipa - Langlobal</title> 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -20,60 +20,64 @@
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="quemsomos.html">Quem Somos</a></li> 
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="equipa.html">Equipa</a></li>
-                <li><a href="clientes.html">Clientes</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="page-wrapper container">
 
-    <main class="page-content"> 
-        <div class="container">
+        <main class="content-area"> 
 
+             
             <section id="team">
-        <h2>Equipa</h2>
-        <p>Somos uma empresa composta por tradutores experientes, com diferentes áreas de especialização e um diverso leque de línguas de trabalho.</p>
-        
-        <div class="team-member">
-            <h3>Anton Malchuk</h3>
-            <p>Licenciado em Línguas Aplicadas pela Universidade do Minho, iniciou a sua carreira de tradução e revisão em 2018, utilizando as suas competências nativas em ucraniano e russo, juntamento com fluência em português e inglês. Apresenta, por tanto, um diverso portefólio de tradução, particularmente nas áreas das tecnologias de informação e tecnologia.</p>
-        </div>
-        
-        <div class="team-member">
-            <h3>Carlos Miguel da Costa Pereira</h3>
-            <p>Licenciado em Línguas Aplicadas e mestre em Língua, Literatura e Cultura Inglesa pela Universidade do Minho, é tradutor e revisor desde 2019. Especializa-se na tradução EN-PT nas áreas das ciências humanas e marketing, assim como localização.</p>
-        </div>
+                <h2>Equipa</h2>
+                <p>Somos uma empresa composta por tradutores experientes, com diferentes áreas de especialização e um diverso leque de línguas de trabalho.</p>
 
-        <div class="team-member">
-            <h3>David Manuel da Silva Oliveira</h3>
-            <p>Licenciado em Línguas Aplicadas e mestre em Tradução e Comunicação Multilingue pela Universidade do Minho, oferece serviços de tradução EN-PT e revisão desde 2016, com particular experiência nas áreas das ciências sociais e turismo.</p>
-        </div>
+                
+                
+                <div class="team-container"> 
+                    <div class="team-member">
+                        <h3>Anton Malchuk</h3>
+                        <p>Licenciado em Línguas Aplicadas pela Universidade do Minho, iniciou a sua carreira de tradução e revisão em 2018, utilizando as suas competências nativas em ucraniano e russo, juntamento com fluência em português e inglês. Apresenta, por tanto, um diverso portefólio de tradução, particularmente nas áreas das tecnologias de informação e tecnologia.</p>
+                    </div>
 
-        <div class="team-member">
-            <h3>João Pedro Lamego Macedo</h3>
-            <p>Licenciado em Línguas Aplicas e Negócios Internacionais pela Universidade do Minho, combina conhecimentos económicos com experiência no mundo da tradução e revisão EN-PT e FR-PT desde 2018, de forma a criar um vasto portefólio nas áreas do direito, economia e finanças.</p>
-        </div>
-    </section>
+                    <div class="team-member">
+                        <h3>Carlos Miguel da Costa Pereira</h3>
+                        <p>Licenciado em Línguas Aplicadas e mestre em Língua, Literatura e Cultura Inglesa pela Universidade do Minho, é tradutor e revisor desde 2019. Especializa-se na tradução EN-PT nas áreas das ciências humanas e marketing, assim como localização.</p>
+                    </div>
 
+                    <div class="team-member">
+                        <h3>David Manuel da Silva Oliveira</h3>
+                        <p>Licenciado em Línguas Aplicadas e mestre em Tradução e Comunicação Multilingue pela Universidade do Minho, oferece serviços de tradução EN-PT e revisão desde 2016, com particular experiência nas áreas das ciências sociais e turismo.</p>
+                    </div>
 
-        </div>
-    </main>
+                    <div class="team-member">
+                        <h3>João Pedro Lamego Macedo</h3>
+                        <p>Licenciado em Línguas Aplicas e Negócios Internacionais pela Universidade do Minho, combina conhecimentos económicos com experiência no mundo da tradução e revisão EN-PT e FR-PT desde 2018, de forma a criar um vasto portefólio nas áreas do direito, economia e finanças.</p>
+                    </div>
+                </div> 
+            </section>
+            
 
-    <footer>
+        </main> 
+
+        <aside class="sidebar-nav">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="equipa.html">Equipa</a></li> 
+                <li><a href="clientes.html">Clientes</a></li>
+                
+                </ul>
+        </aside>
+
+    </div> <footer>
         <div class="container">
-            <p>&copy; <span id="year-pt-eq"></span> Langlobal. Todos os direitos reservados.</p>
+            <p>&copy; <span id="year-pt-eq"></span> Langlobal. Todos os direitos reservados.</p> 
         </div>
     </footer>
 
      <script>
         // Id diferente para evitar conflitos se houver mais scripts
         document.getElementById('year-pt-eq').textContent = new Date().getFullYear();
-    </script>
+     </script>
 
 </body>
 </html>

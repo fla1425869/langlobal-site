@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Langlobal - Serviços Linguísticos</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="lang-switch">
         Português | <a href="index_en.html">English</a> | <a href="index_fr.html">Français</a>
-        
     </div>
 
     <header>
@@ -21,58 +20,28 @@
         </div>
     </header>
 
-    <nav>
-        <div class="container">
+    <div class="page-wrapper container"> 
+
+        <main class="content-area"> 
+            <h2>Bem-vindo à Langlobal!</h2>
+            <p>Somos especialistas em serviços linguísticos, oferecendo traduções e revisões de alta qualidade para diversas necessidades.</p>
+            <p>Utilize a navegação ao lado para explorar as diferentes secções e saber mais sobre nós, os nossos serviços, a equipa dedicada e os clientes que confiam no nosso trabalho.</p>
+            <p>Estamos à sua disposição para qualquer esclarecimento ou pedido de orçamento.</p>
+            
+        </main>
+
+        <aside class="sidebar-nav"> 
+            <h3>Navegação</h3>
             <ul>
-                <li><a href="index.html">Início</a></li> 
                 <li><a href="quemsomos.html">Quem Somos</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="equipa.html">Equipa</a></li>
                 <li><a href="clientes.html">Clientes</a></li>
                 
-            </ul>
-        </div>
-    </nav>
+                </ul>
+        </aside>
 
-    <main>
-        <div class="container">
-            <div class="card-container">
-                
-                <a href="quemsomos.html" class="card">
-                    <h2>Quem Somos</h2>
-                    <p>Saiba mais sobre a nossa história, missão e valores.</p>
-                    
-                </a>
-
-                
-                <a href="servicos.html" class="card">
-                    <h2>Serviços</h2>
-                    <p>Descubra os nossos serviços de tradução, revisão e áreas de especialização.</p>
-                </a>
-
-                
-                <a href="equipa.html" class="card">
-                    <h2>Equipa</h2>
-                    <p>Conheça os profissionais experientes da Langlobal.</p>
-                </a>
-
-                
-                <a href="clientes.html" class="card">
-                    <h2>Clientes</h2>
-                    <p>Veja algumas das empresas que confiam nos nossos serviços.</p>
-                </a>
-
-                
-                <div class="card card-orcamentos"> 
-                    <h2>Orçamentos</h2>
-                    <p>Para orçamentos, contacte-nos através do e-mail: info@langlobal.com</p>
-                    
-                    <p>Teremos todo o prazer em responder ao seu pedido.</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
+    </div>
     <footer>
         <div class="container">
             <p>&copy; <span id="year-pt"></span> Langlobal. Todos os direitos reservados.</p>
@@ -80,7 +49,7 @@
     </footer>
 
     <script>
-        // Garante que o script do ano funciona (pode estar no footer ou aqui)
+        // Garante que o script do ano funciona
         document.getElementById('year-pt').textContent = new Date().getFullYear();
     </script>
 
