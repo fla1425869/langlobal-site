@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {/* Título Alterado */}
+    <title>Orçamento - Langlobal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="lang-switch">
+        Português | <a href="index_en.html">English</a> | <a href="index_fr.html">Français</a>
+    </div>
+
+    <header>
+        <div class="container">
+            <img src="images/logo.jpg" alt="Logótipo Langlobal">
+            <h1>Langlobal</h1>
+            <p>Excelência em Serviços Linguísticos</p>
+        </div>
+    </header>
+
+    <div class="page-wrapper container">
+
+        {/* Conteúdo Principal Alterado */}
+        <main class="content-area">
+            <section id="orcamento-info"> {/* ID Alterado/Novo */}
+                <h2>Orçamento</h2>
+                <p>Se pretende utilizar e conhecer com mais detalhe os nossos serviços, solicite um orçamento gratuito através do e-mail: <a href="mailto:info@langlobal.com">info@langlobal.com</a></p>
+                <p>Teremos todo o prazer em responder ao seu pedido e apresentar-lhe serviço de elevada qualidade.</p>
+            </section>
+        </main>
+
+        {/* Barra Lateral Atualizada */}
+        <aside class="sidebar-nav">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="quemsomos.html">Quem Somos</a></li> {/* Removida classe active se existia */}
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="equipa.html">Equipa</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="orcamento.html" class="active">Orçamento</a></li> {/* Link adicionado e marcado como ativo */}
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer>
+        <div class="container">
+                                        {/* ID do Script Alterado */}
+            <p>&copy; <span id="year-pt-orc"></span> Langlobal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+     <script>
+        // ID Alterado aqui também
+        document.getElementById('year-pt-orc').textContent = new Date().getFullYear();
+     </script>
+
+</body>
+</html>
