@@ -11,26 +11,51 @@ body {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px; /* Padding lateral aplicado no container */
+}
+.border{
+    border-bottom: 1px solid #eee;
+}
+.logo{
+    text-align: center;
+    align-content: center;
+}
+
+.link-logo{
+    max-width: 180px;
+    height: auto;
 }
 
 /* --- Header --- */
 header {
-    border-bottom: 1px solid #eee;
     padding: 20px 0; /* Padding vertical no header */
 }
 /* Removido header .container { padding: 20px; } pois o container já tem padding */
 header img {
     max-width: 180px;
     height: auto;
-    margin-bottom: 10px;
-    display: block; /* Garante que a imagem não fica inline */
+    
+    /* Garante que a imagem não fica inline */
 }
+header .logo img{
+
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+header .logo img:hover{
+    max-width: 190px;
+    max-height: 190px;
+    opacity: 0.8;
+ }
 header h1 {
     margin-top: 0;
     margin-bottom: 0.2em; /* Ajustar espaço abaixo do H1 */
+    color: #0056b3;
+    text-transform: uppercase;
+   
 }
 header p {
     margin-top: 0;
@@ -61,7 +86,7 @@ footer {
     font-size: 0.9em;
     color: #666;
     border-top: 1px solid #eee;
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 20px 0; /* Padding vertical no footer */
 }
 /* Removido footer .container { padding: 20px; } */
@@ -73,12 +98,16 @@ h2, h3 {
 }
 /* Títulos H2 - Alinhados à esquerda por defeito agora */
 h2 {
-    /* text-align: center; */ /* Removido centrado por defeito */
-    text-align: left;
+    text-align: center;  /* Removido centrado por defeito */
     margin-bottom: 25px; /* Espaço abaixo */
     margin-top: 0; /* Reset de margem de topo */
     padding-bottom: 10px; /* Espaço antes da borda */
     border-bottom: 1px solid #eee; /* Linha subtil abaixo dos H2 */
+    text-transform: uppercase;
+    background-color: #546ab4;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
 }
 h3 {
     margin-bottom: 15px;
@@ -91,7 +120,7 @@ h3 {
     display: flex;
     flex-wrap: wrap; /* Permite que a sidebar passe para baixo */
     gap: 30px; /* Espaço entre conteúdo e sidebar */
-    padding: 30px 0; /* Espaçamento vertical no wrapper */
+     /* Espaçamento vertical no wrapper */
     /* Container aplicado no HTML do page-wrapper ou individualmente abaixo */
 }
 
@@ -99,11 +128,11 @@ h3 {
     flex: 1; /* Ocupa o espaço flexível */
     min-width: 60%; /* Largura mínima */
 }
+
 /* Estilos para secções DENTRO da área de conteúdo principal (nas páginas internas) */
 .content-area section {
     margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
+   /* border-bottom: 1px solid #eee; */
 }
 .content-area section:last-of-type { /* Remove borda/espaço da última secção */
     border-bottom: none;
@@ -114,6 +143,10 @@ h3 {
 .content-area section h2 {
     /* Herda o h2 default (left, border-bottom) */
     font-size: 1.5em; /* Exemplo de ajuste de tamanho */
+    background-color: #546ab4;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .sidebar-nav {
@@ -124,16 +157,19 @@ h3 {
     border-radius: 8px;
     padding: 20px;
     height: fit-content; /* Altura ajusta-se ao conteúdo */
+    text-align: center;
+ 
 }
 
 .sidebar-nav h3 {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 1.2em;
-    color: #333;
+    color: #0056b3;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
-    text-align: left; /* Alinhar título da sidebar */
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .sidebar-nav ul {
@@ -155,8 +191,7 @@ h3 {
     border-bottom: none;
 }
 
-.sidebar-nav li a:hover,
-.sidebar-nav li a.active { /* Estilo para link ativo (requer JS ou classe manual) */
+.sidebar-nav li a:hover { /* Estilo para link ativo (requer JS ou classe manual) */
     background-color: #e0eafc; /* Fundo diferente no hover/ativo */
     /* color: #00276b; */ /* Cor de texto diferente no hover/ativo */
     border-radius: 4px;
@@ -166,19 +201,39 @@ h3 {
 @media (max-width: 768px) {
     .page-wrapper {
         flex-direction: column; /* Empilha as colunas */
-         padding: 20px 0; /* Ajustar padding vertical */
+         /* Ajustar padding vertical */
+    }
+    .page-wrapper p {
+        padding-left: 20px;
     }
     .sidebar-nav {
         flex-basis: auto; /* Largura automática */
         width: 100%; /* Ocupa largura total */
-        margin-top: 20px;
         border-left: 1px solid #eee; /* Manter borda */
         box-sizing: border-box; /* Garante que padding não aumenta a largura total */
+        margin: auto;
     }
     /* Ajustar H2 em mobile se necessário */
-    h2 {
-        font-size: 1.6em;
+
+}
+@media (max-width: 1280px) {
+    .page-wrapper p {
+        padding-left: 20px;
     }
+    .sidebar-nav {
+        margin: auto;
+        flex-basis: auto;
+        width: 100%;
+        border-left: 1px solid #eee;
+        box-sizing: border-box;
+    }
+    header{
+        text-align: center;
+    }
+    .content-area{
+        border-bottom: 1px solid #eee;
+    }
+
 }
 
 
@@ -216,20 +271,27 @@ h3 {
     list-style: disc;
     padding-left: 20px;
     margin: 20px 0 0 0;
-    column-count: 2;
     column-gap: 40px;
     column-width: 200px;
 }
 #expertise ul li {
     margin-bottom: 10px;
     break-inside: avoid-column;
+    background-color: #546ab4;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 @media (max-width: 600px) { /* Mantém media query para a lista */
     #expertise ul {
         column-count: 1;
     }
 }
-
+ul li::marker {
+  color: #546ab4;   
+}
 /* --- Equipa (usado em equipa.html dentro de .content-area) --- */
 #team .team-container {
     display: grid;
@@ -247,6 +309,7 @@ h3 {
 .team-member h3 {
     margin-top: 0;
     color: #0056b3;
+    text-align: center;
 }
 
 /* --- Clientes (usado em clientes.html dentro de .content-area) --- */
